@@ -8,7 +8,10 @@
 <div class="reviews div-show">
   <div class="reviews-header">
     <h4>Reviews</h4>
-    <%= link_to "Add a review",  new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+  </div>
+
+  <div>
+    <%= render "reviews/new" %>
   </div>
 
   <ul>
