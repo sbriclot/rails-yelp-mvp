@@ -13,6 +13,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar">
+      <%= link_to "Yelp MVP", root_path, class: "nav-title" %>
+      <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary" %>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

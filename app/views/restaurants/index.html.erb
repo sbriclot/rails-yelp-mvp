@@ -1,0 +1,9 @@
+<h1>Restaurants</h1>
+<div>
+  <% @restaurants.each do |restaurant| %>
+    <div class="rest-card">
+      <div><%= restaurant.name %> - <%= restaurant.category.capitalize %> food</div>
+      <%= link_to "Show details", restaurant_path(restaurant.id), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

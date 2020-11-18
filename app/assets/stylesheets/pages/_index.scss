@@ -1,2 +1,44 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.navbar {
+  border-bottom: 1px solid lightgray;
+  background-color: #EEEEEE;
+}
+
+.nav-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.container {
+  margin-top: 25px;
+}
+
+.rest-card {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.div-show {
+  width: 700px;
+  margin-bottom: 16px;
+  padding: 10px;
+  box-shadow: 0 0 2px black;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fas {
+  color: #ffd800;
+}

@@ -1,0 +1,29 @@
+<div class="restaurant div-show">
+  <h1><%= @restaurant.name %></h1>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.category.capitalize %> food</p>
+</div>
+
+<div class="reviews div-show">
+  <div class="reviews-header">
+    <h4>Reviews</h4>
+    <%= link_to "Add a review",  new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+  </div>
+
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li>
+        <div><%= review.content %></div>
+        <% review.rating.to_i.times do  %>
+          <span class="fas fa-star"></span>
+        <% end %>
+        <% (5-review.rating.to_i).times do %>
+          <span class="far fa-star"></span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to "Back", restaurants_path, class: "btn btn-primary"%>
